@@ -13,6 +13,7 @@ interface MagneticButtonProps {
 export default function MagneticButton({ children, className = "", onClick, href }: MagneticButtonProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState(false);
 
   const handleMouse = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!ref.current) return;
@@ -22,10 +23,12 @@ export default function MagneticButton({ children, className = "", onClick, href
     const middleY = clientY - (top + height / 2);
     // Magnetic pull strength (20% of distance from center)
     setPosition({ x: middleX * 0.2, y: middleY * 0.2 });
+    setIsHovering(true);
   };
 
   const reset = () => {
     setPosition({ x: 0, y: 0 });
+    setIsHovering(false);
   };
 
   const { x, y } = position;
@@ -35,7 +38,7 @@ export default function MagneticButton({ children, className = "", onClick, href
       ref={ref}
       onMouseMove={handleMouse}
       onMouseLeave={reset}
-      animate={{ x, y }}
+      animate={{ x, y, scale: isHovering ? 1.03 : 1 }}
       transition={{ type: "spring", stiffness: 350, damping: 20, mass: 0.5 }}
       className={className}
       onClick={onClick}
