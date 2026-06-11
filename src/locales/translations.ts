@@ -85,7 +85,7 @@ export const translations = {
         { q: "С какими технологиями ты работаешь?", a: "Основа моего стека — React и Next.js. Для стилизации использую Tailwind CSS или модульный CSS, если нужен строгий контроль. За сложные анимации отвечает GSAP и Framer Motion, а для интеграции 3D-графики на сайт применяю Three.js (React Three Fiber). Работаю с TypeScript для надежности." },
         { q: "Сколько стоит проект?", a: "Цена зависит от сложности дизайна, количества страниц и необходимости сложных анимаций или 3D-объектов. Обычно разработка качественного лендинга стартует от $500 и занимает около 7-10 дней. Корпоративные сайты или сложные веб-приложения оцениваются индивидуально, начиная от $1500." },
         { q: "Ты делаешь дизайн или только верстаешь?", a: "Я могу взять проект полностью под ключ. Сначала мы обсуждаем бизнес-задачу, затем я проектирую структуру и собираю современный дизайн в Figma. После утверждения макета я переношу его в код. Если у вас уже есть готовый дизайн от другого специалиста — я с радостью его сверстаю." },
-        { q: "Как строится процесс оплаты и работы?", a: "Работаю по прозрачной схеме: мы фиксируем ТЗ, вы вносите предоплату (обычно 50%), и я приступаю к работе. Оставшаяся часть оплачивается после финального релиза на вашем хостинге. Работаю как ИП/самозанятый, могу предоставить все закрывающие документы." }
+        { q: "Как строится процесс оплаты и работы?", a: "Работаю по прозрачной схеме: мы фиксируем ТЗ, вы вносите предоплату (обычно 50%), и я приступаю к работе. Оставшаяся часть оплачивается после финального релиза на вашем хостинге." }
       ]
     },
     contact: {
@@ -182,7 +182,7 @@ export const translations = {
         { q: "What technologies do you use?", a: "My core stack is React and Next.js. For styling, I use Tailwind CSS or CSS Modules. Complex animations are powered by GSAP and Framer Motion, and 3D graphics by Three.js (React Three Fiber). I use TypeScript for reliability." },
         { q: "How much does a project cost?", a: "Pricing depends on design complexity, page count, and the need for complex animations/3D. High-quality landing pages typically start at $500 and take 7-10 days. Corporate sites and web apps are estimated individually, starting at $1500." },
         { q: "Do you design or just code?", a: "I can handle the project end-to. We discuss the business task, then I design the structure and UI in Figma. Once approved, I code it. If you already have a design from another specialist, I'll gladly build it." },
-        { q: "How does payment and workflow look?", a: "I work transparently: we agree on the scope, you make a prepayment (usually 50%), and I begin. The rest is paid after the final release on your hosting. I work as an independent contractor and provide all necessary invoices." }
+        { q: "How does payment and workflow look?", a: "I work transparently: we agree on the scope, you make a prepayment (usually 50%), and I begin. The rest is paid after the final release on your hosting." }
       ]
     },
     contact: {
