@@ -43,15 +43,15 @@ export default function Home() {
       img: "/projects/black_estate_light.png" 
     },
     { 
-      slug: "finflow",
-      tag: "Finance", 
-      name: "FinFlow", 
-      task: "Разработал сложный дашборд с интерактивными графиками. Реализовал модальные окна, фильтрацию табличных данных.",
-      result: "Пользователи стали тратить на 60% меньше времени на поиск нужной информации благодаря чистой иерархии.",
-      role: "Frontend разработка, UI Дизайн",
-      time: "18 дней",
-      metric: "Удобнее на 60%",
-      img: "/projects/finflow_green.png" 
+      slug: "qzzdeals",
+      tag: "Gaming Platform", 
+      name: "QZZ Deals", 
+      task: "Разработал агрегатор скидок на игры (Steam, Epic Games, GOG). Реализовал отслеживание цен онлайн, мультиязычность и плавные видео-переходы.",
+      result: "Создан удобный хаб, где игроки экономят до 100% на покупках благодаря моментальным уведомлениям об акциях.",
+      role: "Frontend разработка",
+      time: "14 дней",
+      metric: "Актуально 24/7",
+      img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop" 
     },
     { 
       slug: "velocity",
