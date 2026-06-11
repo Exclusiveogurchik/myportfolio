@@ -1,0 +1,123 @@
+.mascotContainer {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.speechBubble {
+  background: var(--text);
+  color: var(--bg);
+  padding: 10px 15px;
+  border-radius: 12px;
+  border-bottom-right-radius: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateY(10px) scale(0.9);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  white-space: nowrap;
+}
+
+.showBubble {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.blob {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: morph 4s ease-in-out infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.blob:hover {
+  transform: scale(1.1) translateY(-5px);
+  filter: brightness(1.2);
+  animation-play-state: paused;
+}
+
+.happy {
+  animation: jump 0.5s ease;
+}
+
+.eyes {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 5px;
+}
+
+.eye {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  animation: blink 4s infinite;
+}
+
+.eyeHover {
+  width: 10px;
+  height: 10px;
+  transform: scale(1.2);
+  animation: none;
+}
+
+.mouth {
+  width: 12px;
+  height: 4px;
+  background: white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.blob:hover .mouth {
+  width: 16px;
+  height: 8px;
+  border-radius: 0 0 10px 10px;
+}
+
+@keyframes morph {
+  0%, 100% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
+  34% {
+    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+  }
+}
+
+@keyframes blink {
+  0%, 96%, 98% {
+    transform: scaleY(1);
+  }
+  97% {
+    transform: scaleY(0.1);
+  }
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(0.9, 1.1);
+  }
+}
