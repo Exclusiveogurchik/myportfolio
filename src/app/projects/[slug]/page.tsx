@@ -10,6 +10,9 @@ const projectsData: Record<string, any> = {
     img: "/projects/black_estate_mockup_1781178303072.png",
     task: "Создать современный премиальный интерфейс, который подчёркивает статус объектов недвижимости.",
     result: "Минималистичный дизайн с акцентом на визуальную подачу и удобную навигацию.",
+    role: "UX/UI Дизайн, Frontend",
+    time: "14 дней",
+    metric: "Рост заявок на 30%"
   },
   "nova-ai": {
     name: "Nova AI",
@@ -17,6 +20,9 @@ const projectsData: Record<string, any> = {
     img: "/projects/nova_ai_mockup_1781178337765.png",
     task: "Разработать современный интерфейс для технологического продукта.",
     result: "Чистый дизайн, удобная структура и акцент на пользовательском опыте.",
+    role: "Дизайн интерфейса, Верстка",
+    time: "21 день",
+    metric: "+45% удержание"
   },
   "finflow": {
     name: "FinFlow",
@@ -24,6 +30,9 @@ const projectsData: Record<string, any> = {
     img: "/projects/finflow_mockup_1781178322804.png",
     task: "Создать интерфейс для работы с аналитикой и финансовыми данными.",
     result: "Информативный дизайн с понятной визуализацией ключевых показателей.",
+    role: "UX Исследование, UI Дизайн",
+    time: "18 дней",
+    metric: "Удобнее на 60%"
   },
   "luxdrive": {
     name: "LuxDrive",
@@ -31,6 +40,9 @@ const projectsData: Record<string, any> = {
     img: "/projects/luxdrive_mockup_1781178347105.png",
     task: "Передать ощущение эксклюзивности и высокого уровня сервиса.",
     result: "Стильный интерфейс с акцентом на визуальную составляющую бренда.",
+    role: "Брендинг, Дизайн, Next.js",
+    time: "10 дней",
+    metric: "x2 конверсия"
   }
 };
 
@@ -54,6 +66,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
           Назад в портфолио
         </Link>
+        <br />
         <span className={styles.tag}>{project.tag}</span>
         <h1 className={`display-font ${styles.title}`}>{project.name}</h1>
       </header>
@@ -64,12 +77,27 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       </div>
 
       <div className={styles.content}>
+        <div className={styles.metricsBar}>
+          <div className={styles.metricBox}>
+            <span className={styles.metricLabel}>Моя роль</span>
+            <span className={styles.metricValue}>{project.role}</span>
+          </div>
+          <div className={styles.metricBox}>
+            <span className={styles.metricLabel}>Сроки</span>
+            <span className={styles.metricValue}>{project.time}</span>
+          </div>
+          <div className={styles.metricBox}>
+            <span className={styles.metricLabel}>Результат клиента</span>
+            <span className={styles.metricValue}>{project.metric}</span>
+          </div>
+        </div>
+
         <div className={styles.section}>
           <h2 className="display-font">Задача</h2>
           <p>{project.task}</p>
         </div>
         <div className={styles.section}>
-          <h2 className="display-font">Результат</h2>
+          <h2 className="display-font">Решение</h2>
           <p>{project.result}</p>
         </div>
       </div>
