@@ -32,9 +32,10 @@ export default function Home() {
   const heroY = useTransform(scrollYProgress, [0, 0.2], [0, -100]);
 
   const faqItems = [
-    { question: "Сколько занимает разработка сайта?", answer: "Обычно от нескольких дней до нескольких недель в зависимости от сложности проекта. Точные сроки обсуждаются после постановки задачи." },
-    { question: "Работаете ли вы с готовым дизайном?", answer: "Да, я могу сверстать сайт по вашему готовому дизайн-макету из Figma, сохраняя идеальную точность (Pixel Perfect)." },
-    { question: "Можно ли внести правки после запуска?", answer: "Да, базовая поддержка после запуска включена. Дополнительные масштабные правки или поддержка обсуждаются индивидуально." }
+    { question: "Вы работаете с готовым дизайном?", answer: "Да, могу реализовать проект по готовому макету или помочь с созданием собственного решения." },
+    { question: "Адаптированы ли сайты для мобильных устройств?", answer: "Да, все проекты разрабатываются с учётом корректной работы на разных устройствах." },
+    { question: "Можно ли доработать существующий сайт?", answer: "Да, в зависимости от задачи можно улучшить дизайн, функциональность или структуру текущего проекта." },
+    { question: "Как связаться с вами?", answer: "Через форму обратной связи или указанные контакты." }
   ];
 
   const projects = [
@@ -42,32 +43,32 @@ export default function Home() {
       slug: "black-estate",
       tag: "Real Estate", 
       name: "Black Estate", 
-      task: "Создать современный и премиальный образ бренда агентства недвижимости.",
-      result: "Минималистичный дизайн с акцентом на объекты недвижимости и удобный каталог.",
+      task: "Создать современный премиальный интерфейс, который подчёркивает статус объектов недвижимости.",
+      result: "Минималистичный дизайн с акцентом на визуальную подачу и удобную навигацию.",
       img: "/projects/black_estate_mockup_1781178303072.png" 
     },
     { 
       slug: "nova-ai",
       tag: "SaaS", 
       name: "Nova AI", 
-      task: "Разработать интерфейс для платформы автоматизации бизнес-процессов с ИИ.",
-      result: "Удобный и интуитивно понятный дашборд с футуристичным, но строгим дизайном.",
+      task: "Разработать современный интерфейс для технологического продукта.",
+      result: "Чистый дизайн, удобная структура и акцент на пользовательском опыте.",
       img: "/projects/nova_ai_mockup_1781178337765.png" 
     },
     { 
       slug: "finflow",
       tag: "Finance", 
       name: "FinFlow", 
-      task: "Спроектировать финансовый дашборд с удобной визуализацией данных.",
-      result: "Сложные данные превратились в понятные графики с приятным пользовательским опытом.",
+      task: "Создать интерфейс для работы с аналитикой и финансовыми данными.",
+      result: "Информативный дизайн с понятной визуализацией ключевых показателей.",
       img: "/projects/finflow_mockup_1781178322804.png" 
     },
     { 
       slug: "luxdrive",
       tag: "Auto", 
       name: "LuxDrive", 
-      task: "Сделать сайт аренды авто, передающий эмоцию роскоши и скорости.",
-      result: "Премиальный темный дизайн с крупными фотографиями автомобилей и быстрым бронированием.",
+      task: "Передать ощущение эксклюзивности и высокого уровня сервиса.",
+      result: "Стильный интерфейс с акцентом на визуальную составляющую бренда.",
       img: "/projects/luxdrive_mockup_1781178347105.png" 
     }
   ];
@@ -82,7 +83,7 @@ export default function Home() {
           transition={{ duration: 1 }}
           className={styles.logo}
         >
-          Mark.
+          Mark — Web Developer
         </motion.div>
         <motion.nav 
           initial={{ opacity: 0, y: -20 }} 
@@ -92,8 +93,8 @@ export default function Home() {
         >
           <a href="#about" className="hover-link">Обо мне</a>
           <a href="#projects" className="hover-link">Проекты</a>
+          <a href="#process" className="hover-link">Процесс</a>
           <a href="#faq" className="hover-link">FAQ</a>
-          <a href="#contact" className="hover-link">Контакты</a>
         </motion.nav>
         <motion.a 
           href="#contact"
@@ -117,18 +118,15 @@ export default function Home() {
           animate="visible"
           className={styles.heroLeft}
         >
-          <motion.div variants={fadeInUp} className={styles.eyebrow}>
-            Привет, я Mark
-          </motion.div>
           <motion.h1 variants={fadeInUp} className={`${styles.heroTitle} display-font`}>
-            Создаю современные сайты <span className={styles.accentText}>для бизнеса</span>
+            Создаю современные сайты и <span className={styles.accentText}>цифровые продукты</span>
           </motion.h1>
           <motion.p variants={fadeInUp} className={styles.heroSubtitle}>
-            Не жду идеальный момент. Исследую рынки, нахожу возможности и превращаю идеи в работающие продукты.
+            Помогаю превращать идеи в удобные, быстрые и визуально привлекательные веб-проекты.
           </motion.p>
           <motion.div variants={fadeInUp} className={styles.heroActions}>
-            <a href="#projects" className={`${styles.btnPrimary} hover-link`}>Смотреть проекты ↗</a>
-            <a href="#contact" className={`${styles.btnOutline} hover-link`}>Обсудить проект</a>
+            <a href="#projects" className={`${styles.btnPrimary} hover-link`}>Смотреть проекты</a>
+            <a href="#contact" className={`${styles.btnOutline} hover-link`}>Связаться со мной</a>
           </motion.div>
         </motion.div>
         
@@ -150,6 +148,26 @@ export default function Home() {
         </motion.div>
       </motion.section>
 
+      {/* ABOUT */}
+      <section id="about" className={styles.section} style={{ paddingTop: 0, paddingBottom: "4rem" }}>
+        <motion.div 
+          initial="hidden" 
+          whileInView="visible" 
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+        >
+          <motion.div variants={fadeInUp} className={styles.eyebrow}>Обо мне</motion.div>
+          <motion.h2 variants={fadeInUp} className={`display-font ${styles.sectionTitle}`} style={{ marginBottom: "2rem" }}>
+            Меня зовут Mark.
+          </motion.h2>
+          <motion.div variants={fadeInUp} style={{ maxWidth: "800px", color: "var(--light-gray)", fontSize: "1.1rem", lineHeight: "1.7", marginBottom: "4rem" }}>
+            <p style={{ marginBottom: "1.5rem" }}>Я занимаюсь созданием современных сайтов и интерфейсов, уделяя особое внимание визуалу, удобству и деталям.</p>
+            <p style={{ marginBottom: "1.5rem" }}>Постоянно изучаю новые технологии, экспериментирую с проектами и совершенствую свои навыки на практике. Мне нравится превращать идеи в понятные и эстетичные цифровые продукты, которыми удобно пользоваться.</p>
+            <p>Для меня важны аккуратность, ответственность и стремление делать работу качественно независимо от масштаба проекта.</p>
+          </motion.div>
+        </motion.div>
+      </section>
+
       {/* WHY ME */}
       <section className={styles.section} style={{ paddingTop: 0, paddingBottom: 0 }}>
         <motion.div 
@@ -158,55 +176,42 @@ export default function Home() {
           viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
         >
-          <motion.div variants={fadeInUp} className={styles.eyebrow}>Преимущества</motion.div>
-          <motion.h2 variants={fadeInUp} className={`display-font ${styles.sectionTitle}`} style={{ marginBottom: "2rem" }}>Почему со мной удобно работать</motion.h2>
+          <motion.h2 variants={fadeInUp} className={`display-font ${styles.sectionTitle}`} style={{ marginBottom: "3rem" }}>Почему со мной удобно работать</motion.h2>
           
           <motion.div variants={fadeInUp} className={styles.whyMeGrid}>
             {[
-              { icon: <><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></>, text: "Быстрая коммуникация" },
-              { icon: <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>, text: "Современный дизайн" },
-              { icon: <><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></>, text: "Адаптация под мобильные устройства" },
-              { icon: <><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></>, text: "Внимание к деталям" },
-              { icon: <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>, text: "Поддержка после запуска" }
+              { icon: <><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></>, title: "Современный подход", text: "Использую актуальные решения и уделяю внимание визуальному качеству каждого проекта." },
+              { icon: <><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></>, title: "Внимание к деталям", text: "Продумываю структуру, интерфейсы и пользовательский опыт до мелочей." },
+              { icon: <><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></>, title: "Адаптация под любые устройства", text: "Сайты одинаково хорошо выглядят на компьютерах, планшетах и смартфонах." },
+              { icon: <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>, title: "Постоянное развитие", text: "Регулярно изучаю новые инструменты и подходы в веб-разработке и дизайне." }
             ].map((item, i) => (
-              <div key={i} className={styles.whyMeCard}>
+              <div key={i} className={styles.whyMeCard} style={{ flexDirection: "column", alignItems: "flex-start", gap: "1rem" }}>
                 <div className={styles.whyMeIcon}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     {item.icon}
                   </svg>
                 </div>
-                <div className={styles.whyMeTitle}>{item.text}</div>
+                <div className={styles.whyMeTitle} style={{ fontSize: "1.2rem", color: "var(--foreground)" }}>{item.title}</div>
+                <p style={{ color: "var(--gray)", fontSize: "0.9rem", lineHeight: "1.5" }}>{item.text}</p>
               </div>
             ))}
           </motion.div>
         </motion.div>
       </section>
 
-      {/* STACK & LEARNING */}
-      <section id="about" className={styles.section}>
+      {/* STACK */}
+      <section className={styles.section}>
         <motion.div 
           initial="hidden" 
           whileInView="visible" 
           viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
-          className={styles.stackGrid}
         >
-          <motion.div variants={fadeInUp} className={styles.stackBox}>
-            <h3 className="display-font">Текущий стек</h3>
-            <p>Использую современные инструменты для создания быстрых, производительных и удобных сайтов. Пишу чистый код и собираю надежную архитектуру.</p>
-            <div className={styles.techTags}>
-              {['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Figma', 'Git', 'Vercel'].map(tech => (
-                <span key={tech} className={styles.tag}>{tech}</span>
-              ))}
-            </div>
-          </motion.div>
-          
-          <motion.div variants={fadeInUp} className={styles.stackBox}>
-            <h3 className="display-font">Что я сейчас изучаю</h3>
-            <p>Я постоянно развиваюсь и углубляю свои знания, чтобы создавать еще более сложные и крутые цифровые продукты.</p>
-            <div className={styles.techTags}>
-              {['Next.js', 'UX/UI дизайн', 'Веб-анимации', 'Оптимизация производительности', 'Создание SaaS-продуктов'].map(tech => (
-                <span key={tech} className={`${styles.tag} ${styles.highlight}`}>{tech}</span>
+          <motion.div variants={fadeInUp} style={{ background: "var(--dark-gray)", borderRadius: "24px", padding: "4rem", border: "1px solid var(--border)", textAlign: "center" }}>
+            <h2 className="display-font" style={{ marginBottom: "2rem", fontSize: "2rem" }}>Мой стек</h2>
+            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "1rem" }}>
+              {['HTML', 'CSS', 'JavaScript', 'React', 'Next.js', 'Tailwind CSS', 'Git', 'Figma', 'Vercel'].map(tech => (
+                <span key={tech} className={styles.tag} style={{ fontSize: "1rem", padding: "0.75rem 1.5rem" }}>{tech}</span>
               ))}
             </div>
           </motion.div>
@@ -214,7 +219,7 @@ export default function Home() {
       </section>
 
       {/* PROJECTS */}
-      <section id="projects" className={styles.section}>
+      <section id="projects" className={styles.section} style={{ paddingTop: 0 }}>
         <motion.div 
           initial="hidden" 
           whileInView="visible" 
@@ -222,8 +227,8 @@ export default function Home() {
           variants={staggerContainer}
         >
           <motion.div variants={fadeInUp}>
-            <div className={styles.eyebrow}>Мои работы</div>
-            <h2 className={`display-font ${styles.sectionTitle}`}>Кейсы и концепты</h2>
+            <div className={styles.eyebrow}>Проекты</div>
+            <h2 className={`display-font ${styles.sectionTitle}`}>Мои работы</h2>
           </motion.div>
           
           <div className={styles.projectsGrid}>
@@ -259,6 +264,35 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* PROCESS */}
+      <section id="process" className={styles.section}>
+        <motion.div 
+          initial="hidden" 
+          whileInView="visible" 
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+        >
+          <motion.div variants={fadeInUp} className={styles.eyebrow}>Мой процесс</motion.div>
+          <motion.h2 variants={fadeInUp} className={`display-font ${styles.sectionTitle}`}>Как я работаю</motion.h2>
+          
+          <div className={styles.processGrid}>
+            {[
+              { num: "01", title: "Исследование", desc: "Изучаю задачу, цели проекта и собираю референсы." },
+              { num: "02", title: "Планирование", desc: "Продумываю структуру и пользовательский путь." },
+              { num: "03", title: "Дизайн", desc: "Создаю визуальную концепцию будущего продукта." },
+              { num: "04", title: "Разработка", desc: "Собираю рабочую версию сайта и адаптирую её под разные устройства." },
+              { num: "05", title: "Улучшение", desc: "Дорабатываю детали и оптимизирую результат." }
+            ].map((s, i) => (
+              <motion.div key={i} variants={fadeInUp} className={styles.processStep}>
+                <div className={styles.stepNum}>{s.num}</div>
+                <h3 className="display-font">{s.title}</h3>
+                <p>{s.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+
       {/* FAQ */}
       <section id="faq" className={styles.section}>
         <motion.div 
@@ -286,8 +320,8 @@ export default function Home() {
           className={styles.contactCard}
         >
           <div className={styles.contactLeft}>
-            <h2 className="display-font">Готовы обсудить ваш проект?</h2>
-            <p>Напишите мне, и я подготовлю для вас бесплатную консультацию и предложение по вашему проекту.</p>
+            <h2 className="display-font">Давайте обсудим ваш проект</h2>
+            <p>Если у вас есть идея, концепция или задача, которую нужно реализовать, буду рад обсудить детали.<br/><br/>Открыт для новых проектов и сотрудничества.</p>
             <button className={`${styles.btnDark} hover-link`}>
               Связаться со мной
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
@@ -318,7 +352,7 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer className={styles.footer}>
-        <div className={styles.logo}>Mark.</div>
+        <div className={styles.logo}>Mark — Web Developer</div>
         <div className={styles.footerNav}>
           <a href="#about" className="hover-link">Обо мне</a>
           <a href="#projects" className="hover-link">Проекты</a>
