@@ -51,7 +51,7 @@ export default function Home() {
       role: "Frontend разработка",
       time: "14 дней",
       metric: "Актуально 24/7",
-      img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1000&auto=format&fit=crop" 
+      img: "/projects/qzzdeals.png" 
     },
     { 
       slug: "velocity",
