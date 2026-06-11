@@ -34,13 +34,13 @@ const projectsData: Record<string, any> = {
     time: "18 дней",
     metric: "Удобнее на 60%"
   },
-  "luxdrive": {
-    name: "LuxDrive",
+  "velocity": {
+    name: "Velocity Rentals",
     tag: "Auto",
-    img: "/projects/luxdrive_mockup_1781178347105.png",
-    task: "Передать ощущение эксклюзивности и высокого уровня сервиса.",
-    result: "Стильный интерфейс с акцентом на визуальную составляющую бренда.",
-    role: "Брендинг, Дизайн, Next.js",
+    img: "/projects/velocity_mockup.png",
+    task: "Передать ощущение эксклюзивности и высокого уровня сервиса аренды суперкаров.",
+    result: "Строгий премиальный интерфейс в глубоких тёмных тонах с золотыми акцентами.",
+    role: "Дизайн, Next.js",
     time: "10 дней",
     metric: "x2 конверсия"
   }

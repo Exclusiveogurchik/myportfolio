@@ -65,15 +65,15 @@ export default function Home() {
       img: "/projects/finflow_mockup_1781178322804.png" 
     },
     { 
-      slug: "luxdrive",
+      slug: "velocity",
       tag: "Auto", 
-      name: "LuxDrive", 
-      task: "Передать ощущение эксклюзивности и высокого уровня сервиса.",
-      result: "Стильный интерфейс с акцентом на визуальную составляющую бренда.",
-      role: "Брендинг, Дизайн, Next.js",
+      name: "Velocity Rentals", 
+      task: "Передать ощущение эксклюзивности и высокого уровня сервиса аренды суперкаров.",
+      result: "Строгий премиальный интерфейс в глубоких тёмных тонах с золотыми акцентами.",
+      role: "Дизайн, Next.js",
       time: "10 дней",
       metric: "x2 конверсия",
-      img: "/projects/luxdrive_mockup_1781178347105.png" 
+      img: "/projects/velocity_mockup.png" 
     }
   ];
 
