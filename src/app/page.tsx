@@ -304,64 +304,87 @@ export default function Home() {
 
 
 
-      {/* CONTACT (Form) */}
-      <section id="contact" className={styles.section}>
+      {/* CONTACT (Warm Final Section) */}
+      <section id="contact" className={styles.finalSection}>
         <motion.div 
           initial="hidden" 
           whileInView="visible" 
           viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-          className={styles.contactCard}
+          variants={staggerContainer}
+          className={styles.finalContainer}
         >
-          <div className={styles.contactLeft}>
-            <h2 className="display-font">Давайте обсудим ваш проект</h2>
-            <p>Оставьте заявку за 30 секунд. Я свяжусь с вами в течение дня, чтобы обсудить задачу, оценить сроки и стоимость.</p>
-            
-            <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
-              <div className={styles.inputGroup}>
-                <label>Как к вам обращаться?</label>
-                <input type="text" placeholder="Иван Иванов" />
+          <motion.div variants={fadeInUp} className={styles.finalHeader}>
+            <h2 className="display-font">Давай сделаем что-то крутое вместе 🚀</h2>
+            <p className={styles.finalPromise}>Отвечаю в течение 24 часов. Без обязательств — просто обсудим твою идею и поймем, как её лучше реализовать.</p>
+          </motion.div>
+
+          <div className={styles.contactWrapper}>
+            <motion.div variants={fadeInUp} className={styles.contactFormSide}>
+              <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
+                <div className={styles.inputGroup}>
+                  <input type="text" placeholder="Твое имя" required />
+                </div>
+                <div className={styles.inputGroup}>
+                  <input type="text" placeholder="Telegram или Email" required />
+                </div>
+                <div className={styles.inputGroup}>
+                  <textarea placeholder="Коротко о проекте (по желанию)" rows={3}></textarea>
+                </div>
+                <button className={styles.btnForm}>Отправить сообщение</button>
+                <p className={styles.formNote}>Если пишешь — не стесняйся 🙂</p>
+              </form>
+            </motion.div>
+
+            <motion.div variants={fadeInUp} className={styles.contactCardsSide}>
+              <div className={styles.coffeeNote}>
+                <span style={{ fontSize: "1.5rem" }}>☕</span>
+                <p>Скорее всего, я сейчас пью кофе и пишу код. Буду рад отвлечься на твой проект!</p>
               </div>
-              <div className={styles.inputGroup}>
-                <label>Telegram или Email для связи</label>
-                <input type="text" placeholder="@username или mail@example.com" />
+
+              <div className={styles.socialCardsGrid}>
+                <a href="https://t.me/mark_dev" className={styles.socialCard}>
+                  <div className={styles.socialIcon}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                  </div>
+                  <div>
+                    <span className={styles.socialTitle}>Telegram</span>
+                    <span className={styles.socialLink}>@mark_dev</span>
+                  </div>
+                </a>
+                
+                <a href="mailto:mark.dev@gmail.com" className={styles.socialCard}>
+                  <div className={styles.socialIcon}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </div>
+                  <div>
+                    <span className={styles.socialTitle}>Email</span>
+                    <span className={styles.socialLink}>mark.dev@gmail.com</span>
+                  </div>
+                </a>
+                
+                <a href="https://github.com/Exclusiveogurchik" className={styles.socialCard}>
+                  <div className={styles.socialIcon}>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  </div>
+                  <div>
+                    <span className={styles.socialTitle}>GitHub</span>
+                    <span className={styles.socialLink}>Мой код</span>
+                  </div>
+                </a>
               </div>
-              <button className={styles.btnForm}>Оставить заявку</button>
-            </form>
-          </div>
-          <div className={styles.contactRight}>
-            <div className={styles.contactItem}>
-              <div className={styles.contactIcon}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-              </div>
-              <div>
-                <span>Быстрая связь</span>
-                <p>@mark_dev</p>
-              </div>
-            </div>
-            <div className={styles.contactItem}>
-              <div className={styles.contactIcon}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              </div>
-              <div>
-                <span>Email</span>
-                <p>mark.dev@gmail.com</p>
-              </div>
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </section>
 
       {/* FOOTER */}
       <footer className={styles.footer}>
-        <div className={styles.logo}>Mark — Web Developer</div>
         <div className={styles.footerNav}>
-          <a href="#projects" className="hover-link">Кейсы</a>
-          <a href="#process" className="hover-link">Как я работаю</a>
+          <span style={{ color: "var(--light-gray)", fontSize: "0.95rem" }}>Спасибо, что зашёл на сайт ❤️</span>
         </div>
         <div className={styles.footerSocials}>
-          <a href="#" className="hover-link">GitHub</a>
-          <a href="#" className="hover-link">Telegram</a>
+          <a href="https://github.com/Exclusiveogurchik" className="hover-link">GitHub</a>
+          <a href="https://t.me/mark_dev" className="hover-link">Telegram</a>
         </div>
       </footer>
     </div>

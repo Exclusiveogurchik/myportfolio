@@ -481,27 +481,49 @@
   line-height: 1.6;
 }
 
-/* Contact Form */
-.contactCard {
-  background: var(--dark-gray);
-  border: 1px solid var(--border);
-  border-radius: 32px;
-  padding: 5rem;
+/* Final Contact Section */
+.finalSection {
+  padding: 8rem 5%;
+  background: radial-gradient(circle at 50% 100%, rgba(139, 92, 246, 0.05), transparent 60%);
+  border-top: 1px solid var(--border);
+}
+
+.finalContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.finalHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.finalHeader h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--foreground);
+}
+
+.finalPromise {
+  font-size: 1.1rem;
+  color: var(--light-gray);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contactWrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
+  align-items: start;
 }
 
-.contactLeft h2 {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-}
-
-.contactLeft p {
-  color: var(--light-gray);
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 3rem;
+.contactFormSide {
+  background: var(--dark-gray);
+  padding: 3rem;
+  border-radius: 24px;
+  border: 1px solid var(--border);
 }
 
 .form {
@@ -513,84 +535,128 @@
 .inputGroup {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
-.inputGroup label {
-  font-size: 0.9rem;
-  color: var(--gray);
-  font-weight: 500;
-}
-
-.inputGroup input {
+.inputGroup input, .inputGroup textarea {
   width: 100%;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border);
-  padding: 1rem 1.25rem;
-  border-radius: 12px;
+  padding: 1.25rem;
+  border-radius: 16px;
   color: var(--foreground);
   font-family: inherit;
   font-size: 1rem;
   outline: none;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.inputGroup input:focus {
+.inputGroup textarea {
+  resize: none;
+}
+
+.inputGroup input:focus, .inputGroup textarea:focus {
   border-color: var(--accent);
+  background: rgba(255,255,255,0.05);
 }
 
 .btnForm {
   width: 100%;
-  padding: 1rem;
+  padding: 1.25rem;
   background: var(--accent);
   color: #fff;
   border: none;
-  border-radius: 12px;
-  font-size: 1rem;
+  border-radius: 16px;
+  font-size: 1.05rem;
   font-weight: 600;
   cursor: pointer;
-  margin-top: 1rem;
-  transition: opacity 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 15px var(--accent-glow);
 }
 
 .btnForm:hover {
-  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--accent-glow);
 }
 
-.contactRight {
+.formNote {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-top: 1rem;
+}
+
+.contactCardsSide {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  justify-content: center;
 }
 
-.contactItem {
+.coffeeNote {
+  background: rgba(139, 92, 246, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  padding: 2rem;
+  border-radius: 24px;
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
 
-.contactIcon {
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
-  background: var(--background);
+.coffeeNote p {
+  color: var(--light-gray);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.socialCardsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.socialCard {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--dark-gray);
   border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.socialCard:hover {
+  border-color: var(--accent);
+  transform: translateX(5px);
+  background: rgba(255,255,255,0.03);
+}
+
+.socialIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.05);
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--foreground);
 }
 
-.contactItem span {
+.socialCard:hover .socialIcon {
+  color: var(--accent);
+  background: var(--accent-glow);
+}
+
+.socialTitle {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--gray);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
 }
 
-.contactItem p {
-  font-size: 1.25rem;
+.socialLink {
+  font-size: 1.1rem;
   font-weight: 600;
+  color: var(--foreground);
 }
 
 .footer {
@@ -751,7 +817,7 @@
 
 /* Responsive updates */
 @media (max-width: 1024px) {
-  .hero, .projectCardLarge, .contactCard, .aboutGrid {
+  .hero, .projectCardLarge, .contactWrapper, .aboutGrid {
     grid-template-columns: 1fr;
   }
   .faqGrid {
