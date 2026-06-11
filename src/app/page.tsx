@@ -135,9 +135,17 @@ export default function Home() {
         >
           <div className={styles.devCard}>
             <div className={styles.devCardHeader}>
-              <div className={styles.devAvatar}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/me.jpg" alt="Мое фото" className={styles.devAvatarImg} />
+              <div className={styles.devAvatarContainer}>
+                <div className={styles.devAvatarInner}>
+                  <div className={styles.devAvatarFront}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/me.jpg" alt="Мое фото" className={styles.devAvatarImg} />
+                  </div>
+                  <div className={styles.devAvatarBack}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/faces.png" alt="Прикольные лица" className={styles.devAvatarImg} />
+                  </div>
+                </div>
               </div>
               <div>
                 <h3 className={styles.devName}>Коротко обо мне</h3>

@@ -130,9 +130,34 @@
   border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-.devAvatar {
+.devAvatarContainer {
+  background-color: transparent;
   width: 70px;
   height: 70px;
+  perspective: 1000px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.devAvatarInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+}
+
+.devAvatarContainer:hover .devAvatarInner {
+  transform: rotateY(180deg);
+}
+
+.devAvatarFront, .devAvatarBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background: var(--dark-gray);
   display: flex;
@@ -141,7 +166,12 @@
   box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
   border: 2px solid var(--accent);
   overflow: hidden;
-  flex-shrink: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.devAvatarBack {
+  transform: rotateY(180deg);
 }
 
 .devAvatarImg {
@@ -152,7 +182,7 @@
   transition: filter 0.4s ease, transform 0.4s ease;
 }
 
-.devAvatar:hover .devAvatarImg {
+.devAvatarContainer:hover .devAvatarImg {
   filter: grayscale(0%) contrast(1);
   transform: scale(1.05);
 }
