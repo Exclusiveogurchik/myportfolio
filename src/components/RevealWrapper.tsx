@@ -46,7 +46,7 @@ export default function RevealWrapper({ children, className = "" }: { children: 
   }, []);
 
   return (
-    <div ref={ref} className={className} style={{ transformPerspective: "1000px" }}>
+    <div ref={ref} className={className} style={{ perspective: "1000px" }}>
       {children}
     </div>
   );
