@@ -16,6 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" suppressHydrationWarning>
+      <body>
         <CustomCursor />
         <Mascot />
         <SmoothScroll>
