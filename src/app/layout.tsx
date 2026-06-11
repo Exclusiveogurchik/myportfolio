@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
+import SmoothScroll from "@/components/SmoothScroll";
 
 export const metadata: Metadata = {
-  title: "Mark | Digital Products",
-  description: "Исследую рынки, нахожу возможности и превращаю идеи в работающие продукты.",
+  title: "Mark | Web Developer",
+  description: "Делаю продающие сайты для бизнеса, которые приносят заявки.",
 };
 
 export default function RootLayout({
@@ -16,9 +17,11 @@ export default function RootLayout({
     <html lang="ru" suppressHydrationWarning>
       <body>
         <CustomCursor />
-        <div style={{ position: "relative", zIndex: 1 }}>
-          {children}
-        </div>
+        <SmoothScroll>
+          <div style={{ position: "relative", zIndex: 1 }}>
+            {children}
+          </div>
+        </SmoothScroll>
       </body>
     </html>
   );
