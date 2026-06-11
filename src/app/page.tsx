@@ -395,7 +395,6 @@ export default function Home() {
           <a href="https://t.me/mark_dev" className="hover-link">Telegram</a>
         </div>
       </footer>
-    </main>
   </div>
   <CornerFaces />
   </>
