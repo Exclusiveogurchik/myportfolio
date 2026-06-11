@@ -115,11 +115,11 @@ export default function Home() {
           className={styles.heroLeft}
         >
           <motion.h1 variants={fadeInUp} className={`${styles.heroTitle} display-font`}>
-            <HackerText triggerOnHover={false} text="Делаю сайты для людей ❤️" /> <br/>
-            которые приятно трогать <span className={styles.accentText}>глазами</span>
+            <HackerText triggerOnHover={false} text="Создаю премиальные" /> <br/>
+            <span className={styles.accentText}>цифровые продукты</span>
           </motion.h1>
           <motion.p variants={fadeInUp} className={styles.heroSubtitle}>
-            Беру на себя всё: от структуры до запуска. Помогаю превращать посетителей в довольных клиентов и создавать живой, дружелюбный дизайн.
+            Беру на себя полный цикл разработки: от архитектуры и дизайна до финального запуска. Помогаю бизнесу выделяться за счет чистого визуала и безупречного UX.
           </motion.p>
           <motion.div variants={fadeInUp} className={styles.heroActions}>
             <MagneticButton href="#projects" className={`${styles.btnPrimary} hover-link`}>Смотреть кейсы</MagneticButton>
@@ -148,15 +148,15 @@ export default function Home() {
             <ul className={styles.devFacts}>
               <li>
                 <span className={styles.factDot}></span>
-                Делаю сайты, которые выглядят дороже, чем стоят
+                Создаю решения, которые подчеркивают статус бизнеса
               </li>
               <li>
                 <span className={styles.factDot}></span>
-                Фокус: скорость, чистый код, идеальный UX
+                Фокус: производительность, чистый код, продуманный UX
               </li>
               <li>
                 <span className={styles.factDot}></span>
-                Работаю в спокойном ритме, без хаоса
+                Строгий процесс работы, прозрачные сроки
               </li>
             </ul>
 
@@ -230,7 +230,7 @@ export default function Home() {
           variants={staggerContainer}
         >
           <motion.div variants={fadeInUp}>
-            <div className={styles.eyebrow}>Кейсы 🚀</div>
+            <div className={styles.eyebrow}>Кейсы</div>
             <h2 className={`display-font ${styles.sectionTitle}`}>Проекты в фокусе</h2>
           </motion.div>
           
@@ -320,31 +320,30 @@ export default function Home() {
           className={styles.finalContainer}
         >
           <motion.div variants={fadeInUp} className={styles.finalHeader}>
-            <h2 className="display-font">Давай сделаем что-то крутое вместе 🚀</h2>
-            <p className={styles.finalPromise}>Отвечаю в течение 24 часов. Без обязательств — просто обсудим твою идею и поймем, как её лучше реализовать.</p>
+            <h2 className="display-font">Готовы обсудить проект?</h2>
+            <p className={styles.finalPromise}>Отвечаю в течение рабочего дня. Оставьте заявку, и мы найдем лучшее решение для вашей задачи.</p>
           </motion.div>
 
           <div className={styles.contactWrapper}>
             <motion.div variants={fadeInUp} className={styles.contactFormSide}>
               <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
                 <div className={styles.inputGroup}>
-                  <input type="text" placeholder="Твое имя" required />
+                  <input type="text" placeholder="Ваше имя" required />
                 </div>
                 <div className={styles.inputGroup}>
                   <input type="text" placeholder="Telegram или Email" required />
                 </div>
                 <div className={styles.inputGroup}>
-                  <textarea placeholder="Коротко о проекте (по желанию)" rows={3}></textarea>
+                  <textarea placeholder="Коротко о проекте" rows={3}></textarea>
                 </div>
-                <button className={styles.btnForm}>Отправить сообщение</button>
-                <p className={styles.formNote}>Если пишешь — не стесняйся 🙂</p>
+                <button className={styles.btnForm}>Оставить заявку</button>
               </form>
             </motion.div>
 
             <motion.div variants={fadeInUp} className={styles.contactCardsSide}>
               <div className={styles.coffeeNote}>
-                <span style={{ fontSize: "1.5rem" }}>☕</span>
-                <p>Скорее всего, я сейчас пью кофе и пишу код. Буду рад отвлечься на твой проект!</p>
+                <span style={{ fontSize: "1.5rem" }}>✦</span>
+                <p>Всегда открыт к интересным предложениям и готов погрузиться в новые задачи.</p>
               </div>
 
               <div className={styles.socialCardsGrid}>
@@ -386,7 +385,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer className={styles.footer}>
         <div className={styles.footerNav}>
-          <span style={{ color: "var(--light-gray)", fontSize: "0.95rem" }}>Спасибо, что зашёл на сайт ❤️</span>
+          <span style={{ color: "var(--light-gray)", fontSize: "0.95rem" }}>© {new Date().getFullYear()} Mark Web Developer</span>
         </div>
         <div className={styles.footerSocials}>
           <a href="https://github.com/Exclusiveogurchik" className="hover-link">GitHub</a>

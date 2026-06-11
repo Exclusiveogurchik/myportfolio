@@ -60,20 +60,20 @@
 }
 
 .accentText {
-  background: linear-gradient(90deg, #c084fc, #8b5cf6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--foreground);
+  font-style: italic;
+  font-weight: 400;
 }
 
 .heroTitle {
-  font-size: 4rem;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-size: 5.5rem;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
 }
 
 .heroSubtitle {
-  font-size: 1.25rem;
-  color: var(--light-gray);
+  font-size: 1.15rem;
+  color: var(--gray);
   line-height: 1.6;
 }
 
@@ -228,7 +228,7 @@
 }
 
 .section {
-  padding: 8rem 5%;
+  padding: 12rem 5%;
 }
 
 .eyebrow {
@@ -328,23 +328,23 @@
 .projectsGrid {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 8rem;
 }
 
 .projectCardLarge {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-  background: var(--dark-gray);
-  border: 1px solid var(--border);
+  background: rgba(15, 15, 18, 0.6);
   border-radius: 32px;
   overflow: hidden;
   align-items: center;
-  transition: border-color 0.4s ease;
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.5s ease;
 }
 
 .projectCardLarge:hover {
-  border-color: var(--gray);
+  transform: translateY(-8px);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
 }
 
 .projectContentLarge {
