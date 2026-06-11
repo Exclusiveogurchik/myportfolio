@@ -8,9 +8,10 @@ interface MagneticButtonProps {
   className?: string;
   onClick?: () => void;
   href?: string;
+  style?: React.CSSProperties;
 }
 
-export default function MagneticButton({ children, className = "", onClick, href }: MagneticButtonProps) {
+export default function MagneticButton({ children, className = "", onClick, href, style }: MagneticButtonProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
@@ -42,7 +43,7 @@ export default function MagneticButton({ children, className = "", onClick, href
       transition={{ type: "spring", stiffness: 350, damping: 20, mass: 0.5 }}
       className={className}
       onClick={onClick}
-      style={{ display: "inline-flex", cursor: "none" }}
+      style={{ display: "inline-flex", cursor: "none", ...style }}
     >
       {children}
     </motion.div>
