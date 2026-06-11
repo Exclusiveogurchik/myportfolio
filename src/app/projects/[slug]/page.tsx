@@ -7,7 +7,7 @@ const projectsData: Record<string, any> = {
   "black-estate": {
     name: "Black Estate",
     tag: "Real Estate",
-    img: "/projects/black_estate_mockup_1781178303072.png",
+    img: "/projects/black_estate_light.png",
     task: "Создать современный премиальный интерфейс, который подчёркивает статус объектов недвижимости.",
     result: "Минималистичный дизайн с акцентом на визуальную подачу и удобную навигацию.",
     role: "UX/UI Дизайн, Frontend",
@@ -17,7 +17,7 @@ const projectsData: Record<string, any> = {
   "nova-ai": {
     name: "Nova AI",
     tag: "SaaS",
-    img: "/projects/nova_ai_mockup_1781178337765.png",
+    img: "/projects/nova_ai_blue.png",
     task: "Разработать современный интерфейс для технологического продукта.",
     result: "Чистый дизайн, удобная структура и акцент на пользовательском опыте.",
     role: "Дизайн интерфейса, Верстка",
@@ -27,7 +27,7 @@ const projectsData: Record<string, any> = {
   "finflow": {
     name: "FinFlow",
     tag: "Finance",
-    img: "/projects/finflow_mockup_1781178322804.png",
+    img: "/projects/finflow_green.png",
     task: "Создать интерфейс для работы с аналитикой и финансовыми данными.",
     result: "Информативный дизайн с понятной визуализацией ключевых показателей.",
     role: "UX Исследование, UI Дизайн",

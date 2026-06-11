@@ -40,7 +40,7 @@ export default function Home() {
       role: "UX/UI Дизайн, Frontend",
       time: "14 дней",
       metric: "Рост заявок на 30%",
-      img: "/projects/black_estate_mockup_1781178303072.png" 
+      img: "/projects/black_estate_light.png" 
     },
     { 
       slug: "nova-ai",
@@ -51,7 +51,7 @@ export default function Home() {
       role: "Дизайн интерфейса, Верстка",
       time: "21 день",
       metric: "+45% удержание",
-      img: "/projects/nova_ai_mockup_1781178337765.png" 
+      img: "/projects/nova_ai_blue.png" 
     },
     { 
       slug: "finflow",
@@ -62,7 +62,7 @@ export default function Home() {
       role: "UX Исследование, UI Дизайн",
       time: "18 дней",
       metric: "Удобнее на 60%",
-      img: "/projects/finflow_mockup_1781178322804.png" 
+      img: "/projects/finflow_green.png" 
     },
     { 
       slug: "velocity",
