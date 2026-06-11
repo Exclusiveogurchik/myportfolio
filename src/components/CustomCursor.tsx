@@ -11,7 +11,7 @@ export default function CustomCursor() {
   const cursorY = useMotionValue(-100);
 
   // Spring configuration for super smooth tracking
-  const springConfig = { damping: 25, stiffness: 300, mass: 0.5 };
+  const springConfig = { damping: 28, stiffness: 700, mass: 0.1 };
   const cursorXSpring = useSpring(cursorX, springConfig);
   const cursorYSpring = useSpring(cursorY, springConfig);
 
