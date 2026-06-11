@@ -1,14 +1,24 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import { motion, useMotionValue, useSpring } from 'framer-motion';
 
 export default function CustomCursor() {
-  const [position, setPosition] = useState({ x: -100, y: -100 });
   const [isHovering, setIsHovering] = useState(false);
+
+  // Motion values for raw mouse position
+  const cursorX = useMotionValue(-100);
+  const cursorY = useMotionValue(-100);
+
+  // Spring configuration for super smooth tracking
+  const springConfig = { damping: 25, stiffness: 300, mass: 0.5 };
+  const cursorXSpring = useSpring(cursorX, springConfig);
+  const cursorYSpring = useSpring(cursorY, springConfig);
 
   useEffect(() => {
     const updateCursor = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      cursorX.set(e.clientX);
+      cursorY.set(e.clientY);
     };
 
     const updateHoverState = (e: MouseEvent) => {
@@ -24,12 +34,12 @@ export default function CustomCursor() {
       window.removeEventListener('mousemove', updateCursor);
       window.removeEventListener('mouseover', updateHoverState);
     };
-  }, []);
+  }, [cursorX, cursorY]);
 
   return (
-    <div
+    <motion.div
       className={`custom-cursor ${isHovering ? 'hover' : ''}`}
-      style={{ left: `${position.x}px`, top: `${position.y}px` }}
+      style={{ left: cursorXSpring, top: cursorYSpring }}
     />
   );
 }
