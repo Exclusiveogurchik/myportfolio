@@ -557,9 +557,136 @@
   font-weight: 600;
 }
 
+/* About Grid */
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  align-items: stretch;
+}
+
+.aboutTextCol h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.aboutTextCol p {
+  font-size: 1.1rem;
+  color: var(--light-gray);
+  line-height: 1.7;
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+.aboutFacts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.factItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.factIcon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.aboutStatsCol {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.stackBox {
+  background: var(--dark-gray);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 2.5rem;
+  flex: 1;
+}
+
+.stackBox h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--light-gray);
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.stackIconsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.stackItem {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 0.8rem;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--light-gray);
+  transition: all 0.3s ease;
+}
+
+.stackItem:hover {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.statsBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.statItem {
+  background: var(--dark-gray);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.statItem h4 {
+  font-size: 3rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.statItem span {
+  font-size: 0.9rem;
+  color: var(--gray);
+  font-weight: 500;
+}
+
 /* Responsive updates */
 @media (max-width: 1024px) {
-  .hero, .projectCardLarge, .contactCard {
+  .hero, .projectCardLarge, .contactCard, .aboutGrid {
     grid-template-columns: 1fr;
   }
   .faqGrid {

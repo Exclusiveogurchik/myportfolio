@@ -273,7 +273,7 @@ export default function Home() {
       </section>
 
 
-      {/* ABOUT & STACK (Moved down) */}
+      {/* ABOUT & STACK */}
       <section id="about" className={styles.section} style={{ paddingTop: 0, paddingBottom: "4rem" }}>
         <motion.div 
           initial="hidden" 
@@ -282,16 +282,50 @@ export default function Home() {
           variants={staggerContainer}
         >
           <motion.div variants={fadeInUp} className={styles.eyebrow}>Обо мне 🙂</motion.div>
-          <motion.div variants={fadeInUp} style={{ maxWidth: "800px", color: "var(--light-gray)", fontSize: "1.1rem", lineHeight: "1.7", marginBottom: "3rem" }}>
-            <p style={{ marginBottom: "1.5rem" }}>Привет! Меня зовут Mark. Я full-stack разработчик, и я реально кайфую от сборки интерфейсов, которые «приятно трогать глазами».</p>
-            <p>Для меня код — это не просто строчки на экране, а способ решать проблемы людей. Люблю, когда анимации плавные, цвета мягкие, а структура проекта понятна даже через полгода. Работаю в спокойном ритме, без хаоса, и всегда на связи.</p>
-          </motion.div>
+          
+          <div className={styles.aboutGrid}>
+            <motion.div variants={fadeInUp} className={styles.aboutTextCol}>
+              <h2 className="display-font">Делаю сайты, которые не просто работают, а выглядят как продукт.</h2>
+              <p>Привет! Меня зовут Mark. Я full-stack разработчик, и я реально кайфую от сборки интерфейсов, которые «приятно трогать глазами». Люблю, когда анимации плавные, цвета мягкие, а структура понятна даже через полгода.</p>
+              
+              <div className={styles.aboutFacts}>
+                <div className={styles.factItem}>
+                  <span className={styles.factIcon}>✨</span>
+                  <span>Убираю «дешёвый вид» с сайтов</span>
+                </div>
+                <div className={styles.factItem}>
+                  <span className={styles.factIcon}>⚡</span>
+                  <span>Фокус: скорость, адаптив, идеальный UX</span>
+                </div>
+                <div className={styles.factItem}>
+                  <span className={styles.factIcon}>🤝</span>
+                  <span>Работаю в спокойном ритме, без хаоса и всегда на связи</span>
+                </div>
+              </div>
+            </motion.div>
 
-          <motion.div variants={fadeInUp} style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
-            {['React', 'Next.js', 'TypeScript', 'Tailwind', 'Framer Motion', 'Figma', 'Git'].map(tech => (
-              <span key={tech} className={styles.tag}>{tech}</span>
-            ))}
-          </motion.div>
+            <motion.div variants={fadeInUp} className={styles.aboutStatsCol}>
+              <div className={styles.stackBox}>
+                <h3>Стек технологий ⚙️</h3>
+                <div className={styles.stackIconsGrid}>
+                  {['React', 'Next.js', 'TypeScript', 'Tailwind', 'GSAP', 'Figma'].map(tech => (
+                    <div key={tech} className={styles.stackItem}>{tech}</div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className={styles.statsBox}>
+                <div className={styles.statItem}>
+                  <h4>5+</h4>
+                  <span>Проектов в фокусе</span>
+                </div>
+                <div className={styles.statItem}>
+                  <h4>1000+</h4>
+                  <span>Часов практики</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </motion.div>
       </section>
 
