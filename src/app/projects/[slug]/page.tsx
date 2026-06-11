@@ -6,33 +6,42 @@ import { notFound } from "next/navigation";
 const projectsData: Record<string, any> = {
   "black-estate": {
     name: "Black Estate",
+    subtitle: "Лендинг для агентства элитной недвижимости. Разработка с нуля: дизайн + верстка + адаптив + анимации.",
     tag: "Real Estate",
     img: "/projects/black_estate_light.png",
-    task: "Создать современный премиальный интерфейс, который подчёркивает статус объектов недвижимости.",
-    result: "Минималистичный дизайн с акцентом на визуальную подачу и удобную навигацию.",
-    role: "UX/UI Дизайн, Frontend",
+    mobileImg: "/projects/black_estate_mobile.png",
+    task: "Сверстал лендинг с нуля, настроил плавные анимации появления секций и сделал адаптив под 3 устройства (Desktop, Tablet, Mobile).",
+    result: "Конверсия выросла за счет правильных акцентов на фотографиях вилл и премиального минималистичного UI.",
+    role: "Frontend разработка, Дизайн",
     time: "14 дней",
-    metric: "Рост заявок на 30%"
+    metric: "Рост заявок на 30%",
+    proofLink: "Ссылка на GitHub"
   },
   "finflow": {
     name: "FinFlow",
+    subtitle: "Дашборд финансовой аналитики. Разработка интерфейса для SaaS: графики, таблицы, модалки.",
     tag: "Finance",
     img: "/projects/finflow_green.png",
-    task: "Создать интерфейс для работы с аналитикой и финансовыми данными.",
-    result: "Информативный дизайн с понятной визуализацией ключевых показателей.",
-    role: "UX Исследование, UI Дизайн",
+    mobileImg: "/projects/finflow_mobile.png",
+    task: "Разработал сложный дашборд с интерактивными графиками. Реализовал модальные окна, фильтрацию табличных данных и удобную навигацию.",
+    result: "Пользователи стали тратить на 60% меньше времени на поиск нужной информации благодаря чистой иерархии.",
+    role: "Frontend разработка, UI Дизайн",
     time: "18 дней",
-    metric: "Удобнее на 60%"
+    metric: "Удобнее на 60%",
+    proofLink: "Коммерческий проект"
   },
   "velocity": {
     name: "Velocity Rentals",
+    subtitle: "Сайт аренды премиум авто. Проектирование + верстка + формы бронирования.",
     tag: "Auto",
     img: "/projects/velocity_mockup.png",
-    task: "Передать ощущение эксклюзивности и высокого уровня сервиса аренды суперкаров.",
-    result: "Строгий премиальный интерфейс в глубоких тёмных тонах с золотыми акцентами.",
-    role: "Дизайн, Next.js",
+    mobileImg: "/projects/velocity_mobile.png",
+    task: "Спроектировал и сверстал интерфейс в глубоких тёмных тонах. Интегрировал форму выбора дат бронирования и кастомный курсор.",
+    result: "Сайт передает ощущение люксового сервиса, что позволило увеличить средний чек и конверсию в аренду в 2 раза.",
+    role: "Full-stack разработка",
     time: "10 дней",
-    metric: "x2 конверсия"
+    metric: "x2 конверсия",
+    proofLink: "Live Demo"
   }
 };
 
@@ -59,11 +68,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <br />
         <span className={styles.tag}>{project.tag}</span>
         <h1 className={`display-font ${styles.title}`}>{project.name}</h1>
+        <p>{project.subtitle}</p>
       </header>
 
-      <div className={styles.imageWrap}>
+      <div className={styles.imagesGrid}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={project.img} alt={project.name} />
+        <img src={project.img} alt={`${project.name} Desktop`} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={project.mobileImg} alt={`${project.name} Mobile`} />
       </div>
 
       <div className={styles.content}>
@@ -73,11 +85,11 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             <span className={styles.metricValue}>{project.role}</span>
           </div>
           <div className={styles.metricBox}>
-            <span className={styles.metricLabel}>Сроки</span>
-            <span className={styles.metricValue}>{project.time}</span>
+            <span className={styles.metricLabel}>Статус</span>
+            <span className={styles.metricValue}>{project.proofLink}</span>
           </div>
           <div className={styles.metricBox}>
-            <span className={styles.metricLabel}>Результат клиента</span>
+            <span className={styles.metricLabel}>Результат</span>
             <span className={styles.metricValue}>{project.metric}</span>
           </div>
         </div>

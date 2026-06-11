@@ -35,9 +35,9 @@ export default function Home() {
       slug: "black-estate",
       tag: "Real Estate", 
       name: "Black Estate", 
-      task: "Создать современный премиальный интерфейс, который подчёркивает статус объектов недвижимости.",
-      result: "Минималистичный дизайн с акцентом на визуальную подачу и удобную навигацию.",
-      role: "UX/UI Дизайн, Frontend",
+      task: "Сверстал лендинг с нуля, настроил плавные анимации появления секций и сделал адаптив под 3 устройства.",
+      result: "Конверсия выросла за счет правильных акцентов на фотографиях вилл и премиального минималистичного UI.",
+      role: "Frontend разработка, Дизайн",
       time: "14 дней",
       metric: "Рост заявок на 30%",
       img: "/projects/black_estate_light.png" 
@@ -46,9 +46,9 @@ export default function Home() {
       slug: "finflow",
       tag: "Finance", 
       name: "FinFlow", 
-      task: "Создать интерфейс для работы с аналитикой и финансовыми данными.",
-      result: "Информативный дизайн с понятной визуализацией ключевых показателей.",
-      role: "UX Исследование, UI Дизайн",
+      task: "Разработал сложный дашборд с интерактивными графиками. Реализовал модальные окна, фильтрацию табличных данных.",
+      result: "Пользователи стали тратить на 60% меньше времени на поиск нужной информации благодаря чистой иерархии.",
+      role: "Frontend разработка, UI Дизайн",
       time: "18 дней",
       metric: "Удобнее на 60%",
       img: "/projects/finflow_green.png" 
@@ -57,9 +57,9 @@ export default function Home() {
       slug: "velocity",
       tag: "Auto", 
       name: "Velocity Rentals", 
-      task: "Передать ощущение эксклюзивности и высокого уровня сервиса аренды суперкаров.",
-      result: "Строгий премиальный интерфейс в глубоких тёмных тонах с золотыми акцентами.",
-      role: "Дизайн, Next.js",
+      task: "Спроектировал и сверстал интерфейс в глубоких тёмных тонах. Интегрировал форму выбора дат бронирования.",
+      result: "Сайт передает ощущение люксового сервиса, что позволило увеличить средний чек и конверсию в аренду в 2 раза.",
+      role: "Full-stack разработка",
       time: "10 дней",
       metric: "x2 конверсия",
       img: "/projects/velocity_mockup.png" 
@@ -86,7 +86,6 @@ export default function Home() {
         >
           <a href="#projects" className="hover-link">Кейсы</a>
           <a href="#process" className="hover-link">Как я работаю</a>
-          <a href="#faq" className="hover-link">FAQ</a>
           <a href="#about" className="hover-link">Обо мне</a>
         </motion.nav>
         <motion.a 
@@ -119,7 +118,7 @@ export default function Home() {
           </motion.p>
           <motion.div variants={fadeInUp} className={styles.heroActions}>
             <a href="#projects" className={`${styles.btnPrimary} hover-link`}>Смотреть кейсы</a>
-            <a href="#contact" className={`${styles.btnOutline} hover-link`}>Оставить заявку</a>
+            <a href="#contact" className={`${styles.btnOutline} hover-link`}>Написать в Telegram</a>
           </motion.div>
         </motion.div>
         
@@ -273,32 +272,6 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* FAQ */}
-      <section id="faq" className={styles.section} style={{ paddingTop: 0 }}>
-        <motion.div 
-          initial="hidden" 
-          whileInView="visible" 
-          viewport={{ once: true, margin: "-100px" }}
-          variants={staggerContainer}
-        >
-          <motion.div variants={fadeInUp} className={styles.eyebrow}>FAQ</motion.div>
-          <motion.h2 variants={fadeInUp} className={`display-font ${styles.sectionTitle}`}>Частые вопросы</motion.h2>
-          
-          <motion.div variants={fadeInUp} className={styles.faqGrid}>
-            {[
-              { q: "Вы работаете с готовым дизайном?", a: "Да, я могу профессионально сверстать проект по вашему готовому макету из Figma, добавив современные анимации." },
-              { q: "Сайт будет нормально работать на телефоне?", a: "Конечно. Более 70% трафика сегодня мобильный, поэтому я делаю упор на идеальное отображение на смартфонах." },
-              { q: "Что если мне не понравится дизайн?", a: "Мы работаем поэтапно. Перед отрисовкой всего дизайна я делаю концепт главного экрана. Мы утверждаем стиль, и только потом двигаемся дальше." },
-              { q: "Как быстро вы можете начать?", a: "Обычно я могу приступить к работе в течение 2-3 дней после обсуждения задачи и внесения предоплаты." }
-            ].map((item, i) => (
-              <div key={i} className={styles.faqCard}>
-                <h3>{item.q}</h3>
-                <p>{item.a}</p>
-              </div>
-            ))}
-          </motion.div>
-        </motion.div>
-      </section>
 
       {/* ABOUT & STACK (Moved down) */}
       <section id="about" className={styles.section} style={{ paddingTop: 0, paddingBottom: "4rem" }}>
