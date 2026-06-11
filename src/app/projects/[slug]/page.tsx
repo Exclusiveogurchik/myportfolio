@@ -51,8 +51,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const project = projectsData[params.slug];
+export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const project = projectsData[resolvedParams.slug];
 
   if (!project) {
     notFound();
