@@ -7,7 +7,6 @@ import styles from "./page.module.css";
 import InteractiveBackground from "@/components/InteractiveBackground";
 import MagneticButton from "@/components/MagneticButton";
 import HackerText from "@/components/HackerText";
-import CornerFaces from "@/components/CornerFaces";
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -71,7 +70,6 @@ export default function Home() {
   ];
 
   return (
-    <>
     <div ref={containerRef} className={styles.main}>
       <InteractiveBackground />
       {/* HEADER */}
@@ -395,8 +393,6 @@ export default function Home() {
           <a href="https://t.me/mark_dev" className="hover-link">Telegram</a>
         </div>
       </footer>
-  </div>
-  <CornerFaces />
-  </>
+    </div>
 );
 }
