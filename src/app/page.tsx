@@ -4,6 +4,9 @@ import { motion, useScroll, useTransform, Variants } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
+import InteractiveBackground from "@/components/InteractiveBackground";
+import MagneticButton from "@/components/MagneticButton";
+import HackerText from "@/components/HackerText";
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
@@ -68,6 +71,7 @@ export default function Home() {
 
   return (
     <div ref={containerRef} className={styles.main}>
+      <InteractiveBackground />
       {/* HEADER */}
       <header className={styles.header}>
         <motion.div 
@@ -76,7 +80,7 @@ export default function Home() {
           transition={{ duration: 1 }}
           className={styles.logo}
         >
-          Mark — Web Developer
+          <HackerText text="Mark — Web Developer" />
         </motion.div>
         <motion.nav 
           initial={{ opacity: 0, y: -20 }} 
@@ -111,14 +115,15 @@ export default function Home() {
           className={styles.heroLeft}
         >
           <motion.h1 variants={fadeInUp} className={`${styles.heroTitle} display-font`}>
-            Делаю сайты для людей ❤️, которые приятно трогать <span className={styles.accentText}>глазами</span>
+            <HackerText triggerOnHover={false} text="Делаю сайты для людей ❤️" /> <br/>
+            которые приятно трогать <span className={styles.accentText}>глазами</span>
           </motion.h1>
           <motion.p variants={fadeInUp} className={styles.heroSubtitle}>
             Беру на себя всё: от структуры до запуска. Помогаю превращать посетителей в довольных клиентов и создавать живой, дружелюбный дизайн.
           </motion.p>
           <motion.div variants={fadeInUp} className={styles.heroActions}>
-            <a href="#projects" className={`${styles.btnPrimary} hover-link`}>Смотреть кейсы</a>
-            <a href="#contact" className={`${styles.btnOutline} hover-link`}>Написать в Telegram</a>
+            <MagneticButton href="#projects" className={`${styles.btnPrimary} hover-link`}>Смотреть кейсы</MagneticButton>
+            <MagneticButton href="#contact" className={`${styles.btnOutline} hover-link`}>Написать в Telegram</MagneticButton>
           </motion.div>
         </motion.div>
         
