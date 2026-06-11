@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Fitness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+    <div class="cursor"></div>
+    <header class="header">
+        <div class="logo hover-link">APEX</div>
+        <nav class="desktop-nav">
+            <a href="#schedule" class="hover-link">Расписание</a>
+            <a href="#trainers" class="hover-link">Тренеры</a>
+            <a href="#memberships" class="hover-link">Абонементы</a>
+        </nav>
+        <div class="menu-btn hover-link">Меню</div>
+    </header>
+
+    <main data-scroll-container>
+        <section class="hero reveal-section">
+            <div class="hero-content">
+                <h1 class="split-text">PURE</h1>
+                <h1 class="split-text indent">FOCUS.</h1>
+                <div class="hero-subtext fade-up">
+                    <p>Премиальный минимализм.<br>Ничего лишнего, только ваш результат.</p>
+                    <a href="#memberships" class="btn-minimalist hover-link">Начать путь</a>
+                </div>
+            </div>
+            <div class="scroll-indicator fade-up">Скролл вниз</div>
+        </section>
+
+        <section id="schedule" class="section reveal-section white-bg">
+            <div class="container">
+                <h2 class="section-title fade-up">Расписание</h2>
+                <div class="schedule-grid fade-up">
+                    <div class="schedule-row">
+                        <div class="s-time">08:00</div>
+                        <div class="s-name">Функциональный тренинг</div>
+                        <div class="s-trainer">Александр</div>
+                        <button class="btn-minimalist small hover-link">Запись</button>
+                    </div>
+                    <div class="schedule-row">
+                        <div class="s-time">10:00</div>
+                        <div class="s-name">Йога & Медитация</div>
+                        <div class="s-trainer">Мария</div>
+                        <button class="btn-minimalist small hover-link">Запись</button>
+                    </div>
+                    <div class="schedule-row">
+                        <div class="s-time">18:30</div>
+                        <div class="s-name">CrossFit Elite</div>
+                        <div class="s-trainer">Денис</div>
+                        <button class="btn-minimalist small hover-link">Запись</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="trainers" class="section reveal-section black-bg">
+            <div class="container">
+                <h2 class="section-title fade-up">Команда</h2>
+                <div class="trainers-list">
+                    <div class="trainer-item fade-up">
+                        <h3 class="t-name hover-link">Александр Волков</h3>
+                        <div class="t-line"></div>
+                        <p class="t-role">Тяжелая атлетика</p>
+                    </div>
+                    <div class="trainer-item fade-up">
+                        <h3 class="t-name hover-link">Мария Романова</h3>
+                        <div class="t-line"></div>
+                        <p class="t-role">Йога-терапия</p>
+                    </div>
+                    <div class="trainer-item fade-up">
+                        <h3 class="t-name hover-link">Денис Ковалев</h3>
+                        <div class="t-line"></div>
+                        <p class="t-role">Кроссфит</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="memberships" class="section reveal-section white-bg">
+            <div class="container">
+                <h2 class="section-title fade-up">Абонементы</h2>
+                <div class="memberships-grid">
+                    <div class="m-card fade-up">
+                        <h3>Classic</h3>
+                        <div class="m-price">7 900 ₽</div>
+                        <p>Доступ к залу и групповым занятиям. Идеально для старта.</p>
+                        <button class="btn-minimalist hover-link">Выбрать</button>
+                    </div>
+                    <div class="m-card fade-up">
+                        <h3>Premium</h3>
+                        <div class="m-price">12 900 ₽</div>
+                        <p>SPA-зона, бассейн и 4 персональные тренировки. Полный фокус.</p>
+                        <button class="btn-minimalist invert hover-link">Выбрать</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer black-bg">
+        <div class="container fade-up">
+            <div class="logo">APEX</div>
+            <a href="../index.html" class="hover-link" style="color: white; text-decoration: none; margin-top: 20px; display: inline-block;">Вернуться в портфолио</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
