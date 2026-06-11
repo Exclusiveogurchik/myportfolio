@@ -1,115 +1,259 @@
-.projectHeader {
-  margin-top: 6rem;
-  margin-bottom: 2rem;
-  padding: 0 5%;
+.main {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.heroSection {
+  width: 100%;
+  height: 65vh;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(10,10,10,1) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 5% 4rem 5%;
+}
+
+.heroTop {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .backLink {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--gray);
-  margin-bottom: 2rem;
-  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.backLink:hover {
+  opacity: 1;
+}
+
+.heroContent {
+  max-width: 900px;
 }
 
 .tag {
   display: inline-block;
-  padding: 0.3rem 0.8rem;
-  background: var(--dark-gray);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
   border: 1px solid var(--border);
-  border-radius: 100px;
   font-size: 0.8rem;
-  color: var(--light-gray);
-  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 1.5rem;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
 }
 
 .title {
-  font-size: 3.5rem;
+  font-size: clamp(3rem, 6vw, 5rem);
   line-height: 1.1;
+  margin-bottom: 1rem;
 }
 
-.projectHeader p {
+.subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
   color: var(--light-gray);
-  margin-top: 1rem;
-  font-size: 1.2rem;
+  max-width: 600px;
   line-height: 1.6;
-  max-width: 800px;
 }
 
-.imagesGrid {
-  display: grid;
-  grid-template-columns: 3fr 1.2fr;
-  gap: 2rem;
-  padding: 0 5%;
-  margin-bottom: 4rem;
-  align-items: start;
-}
-
-.imagesGrid img {
-  width: 100%;
-  height: auto;
-  border-radius: 24px;
-  border: 1px solid var(--border);
-}
-
-.content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  padding: 0 5% 6rem;
+.container {
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 5% 8rem 5%;
 }
 
-.section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.section p {
-  color: var(--light-gray);
-  line-height: 1.7;
-  font-size: 1.1rem;
-}
-
-.metricsBar {
-  grid-column: 1 / -1;
+.metricsGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  background: var(--dark-gray);
+  margin-bottom: 6rem;
+}
+
+.metricCard {
+  background: rgba(25, 25, 25, 0.5);
   border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 3rem;
+  border-radius: 20px;
+  padding: 2.5rem;
+  backdrop-filter: blur(20px);
+}
+
+.cardTitle {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--light-gray);
+  margin-bottom: 2rem;
+  opacity: 0.7;
+}
+
+.roleList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.roleList li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.roleList li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text);
+}
+
+.stackTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.techTag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: var(--text);
+  transition: background 0.3s ease;
+}
+
+.techTag:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.resultBox {
   margin-bottom: 2rem;
 }
 
-.metricBox {
+.metricHighlight {
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: var(--font-display);
+  background: linear-gradient(135deg, #fff 0%, #aaa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.timeText {
+  font-size: 0.95rem;
+  color: var(--light-gray);
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  background: var(--text);
+  color: var(--bg);
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.caseStudy {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.textSection {
+  margin-bottom: 5rem;
+}
+
+.textSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--text);
+  position: relative;
+  display: inline-block;
+}
+
+.textSection h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 40px;
+  height: 2px;
+  background: var(--text);
+}
+
+.textSection p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--light-gray);
+}
+
+.mediaBreak {
+  margin: 6rem 0;
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.02), transparent);
 }
 
-.metricValue {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--accent);
-}
-
-.metricLabel {
-  font-size: 0.9rem;
-  color: var(--gray);
+.mobileScreenshot {
+  width: 100%;
+  max-width: 380px;
+  display: block;
+  border-radius: 32px;
+  border: 4px solid #222;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
 }
 
 @media (max-width: 768px) {
-  .title {
-    font-size: 2.5rem;
+  .heroSection {
+    height: 50vh;
   }
-  .content {
+  .metricsGrid {
     grid-template-columns: 1fr;
   }
-  .metricsBar {
-    grid-template-columns: 1fr;
-    padding: 2rem;
+  .textSection h2 {
+    font-size: 2rem;
+  }
+  .textSection p {
+    font-size: 1.05rem;
   }
 }
