@@ -14,16 +14,6 @@ const projectsData: Record<string, any> = {
     time: "14 дней",
     metric: "Рост заявок на 30%"
   },
-  "nova-ai": {
-    name: "Nova AI",
-    tag: "SaaS",
-    img: "/projects/nova_ai_blue.png",
-    task: "Разработать современный интерфейс для технологического продукта.",
-    result: "Чистый дизайн, удобная структура и акцент на пользовательском опыте.",
-    role: "Дизайн интерфейса, Верстка",
-    time: "21 день",
-    metric: "+45% удержание"
-  },
   "finflow": {
     name: "FinFlow",
     tag: "Finance",

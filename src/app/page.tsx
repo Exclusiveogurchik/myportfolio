@@ -43,17 +43,6 @@ export default function Home() {
       img: "/projects/black_estate_light.png" 
     },
     { 
-      slug: "nova-ai",
-      tag: "SaaS", 
-      name: "Nova AI", 
-      task: "Разработать современный интерфейс для технологического продукта.",
-      result: "Чистый дизайн, удобная структура и акцент на пользовательском опыте.",
-      role: "Дизайн интерфейса, Верстка",
-      time: "21 день",
-      metric: "+45% удержание",
-      img: "/projects/nova_ai_blue.png" 
-    },
-    { 
       slug: "finflow",
       tag: "Finance", 
       name: "FinFlow", 
