@@ -111,10 +111,10 @@ export default function Home() {
           className={styles.heroLeft}
         >
           <motion.h1 variants={fadeInUp} className={`${styles.heroTitle} display-font`}>
-            Делаю продающие сайты для бизнеса, которые приносят <span className={styles.accentText}>заявки</span>
+            Делаю сайты для людей ❤️, которые приятно трогать <span className={styles.accentText}>глазами</span>
           </motion.h1>
           <motion.p variants={fadeInUp} className={styles.heroSubtitle}>
-            Беру на себя всё: от структуры и дизайна до запуска. Помогаю превращать посетителей в клиентов и выглядеть дороже конкурентов.
+            Беру на себя всё: от структуры до запуска. Помогаю превращать посетителей в довольных клиентов и создавать живой, дружелюбный дизайн.
           </motion.p>
           <motion.div variants={fadeInUp} className={styles.heroActions}>
             <a href="#projects" className={`${styles.btnPrimary} hover-link`}>Смотреть кейсы</a>
@@ -195,7 +195,7 @@ export default function Home() {
           variants={staggerContainer}
         >
           <motion.div variants={fadeInUp}>
-            <div className={styles.eyebrow}>Кейсы</div>
+            <div className={styles.eyebrow}>Кейсы 🚀</div>
             <h2 className={`display-font ${styles.sectionTitle}`}>Проекты в фокусе</h2>
           </motion.div>
           
@@ -281,10 +281,10 @@ export default function Home() {
           viewport={{ once: true, margin: "-100px" }}
           variants={staggerContainer}
         >
-          <motion.div variants={fadeInUp} className={styles.eyebrow}>Обо мне</motion.div>
+          <motion.div variants={fadeInUp} className={styles.eyebrow}>Обо мне 🙂</motion.div>
           <motion.div variants={fadeInUp} style={{ maxWidth: "800px", color: "var(--light-gray)", fontSize: "1.1rem", lineHeight: "1.7", marginBottom: "3rem" }}>
-            <p style={{ marginBottom: "1.5rem" }}>Меня зовут Mark. Я занимаюсь созданием современных сайтов и интерфейсов, уделяя особое внимание визуалу, удобству и деталям.</p>
-            <p>Для меня важны аккуратность, ответственность и стремление делать работу качественно независимо от масштаба проекта. Мне нравится превращать сложные идеи бизнеса в понятные цифровые продукты.</p>
+            <p style={{ marginBottom: "1.5rem" }}>Привет! Меня зовут Mark. Я full-stack разработчик, и я реально кайфую от сборки интерфейсов, которые «приятно трогать глазами».</p>
+            <p>Для меня код — это не просто строчки на экране, а способ решать проблемы людей. Люблю, когда анимации плавные, цвета мягкие, а структура проекта понятна даже через полгода. Работаю в спокойном ритме, без хаоса, и всегда на связи.</p>
           </motion.div>
 
           <motion.div variants={fadeInUp} style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
